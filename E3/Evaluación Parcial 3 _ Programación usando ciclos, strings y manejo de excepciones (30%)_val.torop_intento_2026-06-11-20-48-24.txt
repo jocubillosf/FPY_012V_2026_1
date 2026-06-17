@@ -1,0 +1,15 @@
+Nombre: VALERY ALEJANDRA TORO PILLIGUA (val.torop)
+Actividad: Evaluación Parcial 3 | Programación usando ciclos, strings y manejo de excepciones (30%)
+Fecha de envío: jueves 11 de junio de 2026 20H48' CLT
+Calificación actual: Necesita calificación
+
+Campo de entrega:
+No hay datos de texto de entrega de estudiantes para esta actividad.
+
+Comentarios:
+No hay comentarios de estudiantes para esta actividad.
+
+Archivos:
+	Nombre de archivo original: 012v Valery Toro.py
+	Nombre de archivo: Evaluación Parcial 3 _ Programación usando ciclos, strings y manejo de excepciones (30%)_val.torop_intento_2026-06-11-20-48-24_012v Valery Toro.py
+

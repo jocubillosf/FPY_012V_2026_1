@@ -1,0 +1,15 @@
+Nombre: MATIAS IGNACIO BECERRA CUADRA (mat.becerrac)
+Actividad: Evaluación Parcial 3 | Programación usando ciclos, strings y manejo de excepciones (30%)
+Fecha de envío: jueves 11 de junio de 2026 21H32' CLT
+Calificación actual: Necesita calificación
+
+Campo de entrega:
+No hay datos de texto de entrega de estudiantes para esta actividad.
+
+Comentarios:
+No hay comentarios de estudiantes para esta actividad.
+
+Archivos:
+	Nombre de archivo original: ejercicios 1.py
+	Nombre de archivo: Evaluación Parcial 3 _ Programación usando ciclos, strings y manejo de excepciones (30%)_mat.becerrac_intento_2026-06-11-21-32-56_ejercicios 1.py
+

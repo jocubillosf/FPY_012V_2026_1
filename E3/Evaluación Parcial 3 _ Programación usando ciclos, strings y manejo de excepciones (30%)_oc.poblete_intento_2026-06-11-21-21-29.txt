@@ -1,0 +1,15 @@
+Nombre: OCTAVIO ENRIQUE POBLETE PEREZ (oc.poblete)
+Actividad: Evaluación Parcial 3 | Programación usando ciclos, strings y manejo de excepciones (30%)
+Fecha de envío: jueves 11 de junio de 2026 21H21' CLT
+Calificación actual: Necesita calificación
+
+Campo de entrega:
+No hay datos de texto de entrega de estudiantes para esta actividad.
+
+Comentarios:
+No hay comentarios de estudiantes para esta actividad.
+
+Archivos:
+	Nombre de archivo original: Ejercicio1 OctavioPoblete.py
+	Nombre de archivo: Evaluación Parcial 3 _ Programación usando ciclos, strings y manejo de excepciones (30%)_oc.poblete_intento_2026-061F530EA226D2FE317570F4239633F893.py
+

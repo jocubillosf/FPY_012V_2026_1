@@ -1,0 +1,15 @@
+Nombre: BASTIAN FELIPE VARGAS FERRADA (bas.vargas)
+Actividad: Evaluación Parcial 3 | Programación usando ciclos, strings y manejo de excepciones (30%)
+Fecha de envío: jueves 11 de junio de 2026 20H57' CLT
+Calificación actual: Necesita calificación
+
+Campo de entrega:
+<p>Ejercicio 2</p>
+
+Comentarios:
+No hay comentarios de estudiantes para esta actividad.
+
+Archivos:
+	Nombre de archivo original: #Ejercicio2.py
+	Nombre de archivo: Evaluación Parcial 3 _ Programación usando ciclos, strings y manejo de excepciones (30%)_bas.vargas_intento_2026-06-11-20-57-14_#Ejercicio2.py
+

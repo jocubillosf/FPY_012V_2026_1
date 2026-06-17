@@ -1,0 +1,15 @@
+Nombre: PEDRO BENJAMIN SALAS EPUYAO (ped.salas)
+Actividad: Evaluación Parcial 3 | Programación usando ciclos, strings y manejo de excepciones (30%)
+Fecha de envío: jueves 11 de junio de 2026 21H13' CLT
+Calificación actual: Necesita calificación
+
+Campo de entrega:
+No hay datos de texto de entrega de estudiantes para esta actividad.
+
+Comentarios:
+No hay comentarios de estudiantes para esta actividad.
+
+Archivos:
+	Nombre de archivo original: ejercicio prueba 3.py
+	Nombre de archivo: Evaluación Parcial 3 _ Programación usando ciclos, strings y manejo de excepciones (30%)_ped.salas_intento_2026-06-11-21-13-08_ejercicio prueba 3.py
+

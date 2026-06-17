@@ -1,0 +1,15 @@
+Nombre: IGNACIO ALONSO ROMERO GUTIERREZ (ign.romerog)
+Actividad: Evaluación Parcial 3 | Programación usando ciclos, strings y manejo de excepciones (30%)
+Fecha de envío: jueves 11 de junio de 2026 20H59' CLT
+Calificación actual: Necesita calificación
+
+Campo de entrega:
+No hay datos de texto de entrega de estudiantes para esta actividad.
+
+Comentarios:
+No hay comentarios de estudiantes para esta actividad.
+
+Archivos:
+	Nombre de archivo original: #Administracion de registro.py
+	Nombre de archivo: Evaluación Parcial 3 _ Programación usando ciclos, strings y manejo de excepciones (30%)_ign.romerog_intento_2026-0E9BBF4331B89A23BBD546A3FB3A94548.py
+
