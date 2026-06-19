@@ -1,0 +1,70 @@
+estadisticas=""
+opcion=0
+def equipoA(estadisticas):
+    EquipoA={"posesionBalón":"80%", "numeroInfracciones":"5","tirosAlArco":"10"}
+    return EquipoA
+    
+
+def equipoB(estadisticas):
+    equipoB={"posesionBalón":"50%", "numeroInfracciones":"3","tirosAlArco":"5"}
+    return equipoB
+
+def equipoC(estadisticas):
+    equipoC={"posesionBalón":"70%", "numeroInfracciones":"0","tirosAlArco":"5"}
+    return equipoC
+
+
+def equipoD(estadisticas):
+    equipoD={"posesionBalón":"50%", "numeroInfracciones":"3","tirosAlArco":"5"}
+    return equipoD
+
+
+while opcion !=5:
+    print("0)Mostrar estadisticas de equipo")
+    print("1)Mostrar partidos en curso")
+    print("2)Apostar por un equipo")
+    print("3)ApuestasVigentes")
+    print("4)Dinero Total Apostado")
+    print("5)salir")
+    opcion=int(input("ingrese una opcion: "))
+
+    match opcion:
+        case 0:
+            while True:
+                try:
+                    MostrarStats=input("ingrese el equipo que desea ver las estadistica A,B,C,D\n")
+                    if MostrarStats=="A":
+                        print(f"Estadisticas Del equipo A {equipoA(estadisticas)}")
+                        break
+                    elif MostrarStats=="B":
+                        print(f"Estadisticas Del equipo B {equipoB(estadisticas)}")
+                        break
+                    elif MostrarStats=="C":
+                        print(f"Estadisticas Del equipo C {equipoC(estadisticas)}")
+                        break
+                    elif MostrarStats=="D":
+                        print(f"Estadisticas Del equipo D {equipoD(estadisticas)}")
+                        break
+                    else:
+                        print("ingrese una opcion valida")
+                except:
+                    print("ingrese una opcion valida")
+        case 1:
+            print("equipoA vs equipoC")
+            print("equipoB vs equipoD")
+        case 2:
+            while True:
+                try:
+                    apuesta=(input("ingrese el equipo que desea apostar A,B,C,D\n"))
+                    if apuesta=="A":
+                        print("usted a elegido el equipo ", apuesta)
+                    elif apuesta=="B":
+                        print("usted a elegido el equipo ", apuesta)
+                    elif apuesta=="C":
+                        print("usted a elegido el equipo ", apuesta)
+                    elif apuesta=="D":
+                        print("usted a elegido el equipo ", apuesta)
+                    else:
+                        print("ingrese una opcion valida")    
+                except:
+                    print("ingrese una opcion valida")
