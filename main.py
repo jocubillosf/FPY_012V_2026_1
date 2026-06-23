@@ -6,6 +6,7 @@ while op != 4:
     print("2- Apostar en un partido")
     print("3- Ver resumen de apuestas")
     print("4- Salir")
+    op = int(input())
 
     match op:
         case 1:
