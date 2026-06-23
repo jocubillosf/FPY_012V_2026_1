@@ -1,4 +1,4 @@
-team_Portugal = {
+team_portugal = {
     "nombre":"Portugal",
     "remates":16,
     "remates al arco":9,
@@ -12,7 +12,7 @@ team_Portugal = {
     "tiros de esquina":3
 }
 
-team_Uzbekistan = {
+team_uzbekistan = {
     "nombre":"Uzbekistán",
     "remates":7,
     "remates al arco":2,
@@ -26,7 +26,7 @@ team_Uzbekistan = {
     "tiros de esquina":2
 }
 
-team_Inglaterra = {
+team_inglaterra = {
     "nombre":"Inglaterra",
     "remates":14,
     "remates al arco":6,
