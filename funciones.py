@@ -17,8 +17,42 @@ def verpartidos(partidos):
             print(team1)
             print(team2)
 
+def apuestas(op,apu):
+
+
 def apostar(partidos):
-    
+    op = 0
+    apu = 0
+    apuestas = []
+    while op != 5:
+        print("En que grupo deseas apostar??:")
+        print("1-Grupo K")
+        print("2-Grupo D")
+        print("3-Grupo F")
+        print("4-Grupo H")
+        print("5-Salir")
+        op = int(input())
+
+        match op:
+            case 1:
+                print("Grupo K")
+                print("1-Portugal")
+                print("2-uzbekistan")
+                print("Por cual desea apostar??")
+                apu = int(input())
+                apuestas(op,apu)
+            case 2:
+
+            case 3:
+            
+            case 4:
+
+            case 5:
+
+            case _:
+                print("Ingrese una opcion valida.")
+
+
 
 
 def veresumen():
