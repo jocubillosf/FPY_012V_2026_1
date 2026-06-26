@@ -46,13 +46,22 @@ def add_pelicula(list):
         if Duracion(dur):
             val_duracion = True
         else:
-            print("Ingrese una duracion valida.")
+            print("La duracion no es valida.")
             val_duracion = False
 
         if Calificacion(cal):
             val_calificacion = True
         else:
+            print("Calificacion no valida")
             val_calificacion = False
+
+        if val_titulo and val_duracion and val_calificacion:
+            pelicula["Titulo"] = name
+            pelicula["Duracion"] = dur
+            pelicula["Calificacion"] = cal
+            list.append(pelicula)
+            print("Pelicula agregada con exito.")
+            return
     except:
         print("Ingreso invalido no se agregara a la coleccion.")
 
@@ -84,20 +93,23 @@ def Calificacion(cal):
     else:
         return False
 
-
+def buscar_peli(list,name)
 #=====================================================================================
 
 while op != 6:
 
     veiw_menu()
     op = tomar_opcion(op)
+    name = ""
 
     match op:
 
         case 1:
             add_pelicula(coleccion_Peliculas)
         case 2:
-            print("Opcion",op)
+            name = input("Ingrese el nombre de la pelicula que busca")
+            buscar_peli(coleccion_Peliculas,name)
+
         case 3:
             print("Opcion",op)
         case 4:
