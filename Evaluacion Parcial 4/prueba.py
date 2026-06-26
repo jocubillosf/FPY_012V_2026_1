@@ -96,6 +96,7 @@ def Calificacion(cal):
 def buscar_peli(list,name):
     for i, x in enumerate(list):
         if x["Titulo"] == name:
+            print(i)
             return i
         else:
             return -1
@@ -124,10 +125,10 @@ while op != 6:
         case 1:
             add_pelicula(coleccion_Peliculas)
         case 2:
-            name = input("Ingrese el nombre de la pelicula que busca")
+            name = input("Ingrese el nombre de la pelicula que busca:")
             posicion = buscar_peli(coleccion_Peliculas,name)
             if posicion >= 0:
-                coleccion_Peliculas(posicion)
+                print(coleccion_Peliculas[posicion])
             else:
                 print("La película",name,"no se encuentra registrada.")
 
