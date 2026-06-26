@@ -93,13 +93,22 @@ def Calificacion(cal):
     else:
         return False
 
-def buscar_peli(list,name)
+def buscar_peli(list,name):
+    for i, x in enumerate(list):
+        if x["Titulo"] == name:
+            return i
+        else:
+            return -1
+
+
+
 #=====================================================================================
 
 while op != 6:
 
     veiw_menu()
     op = tomar_opcion(op)
+    posicion = 0
     name = ""
 
     match op:
@@ -108,7 +117,11 @@ while op != 6:
             add_pelicula(coleccion_Peliculas)
         case 2:
             name = input("Ingrese el nombre de la pelicula que busca")
-            buscar_peli(coleccion_Peliculas,name)
+            posicion = buscar_peli(coleccion_Peliculas,name)
+            if posicion >= 0:
+                coleccion_Peliculas(posicion)
+            else:
+                print("La película",name,"no se encuentra registrada.")
 
         case 3:
             print("Opcion",op)
