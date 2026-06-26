@@ -1,0 +1,20 @@
+
+def menuPrincipal():
+    print("========== MENÚ PRINCIPAL ==========")
+    print("1. Agregar película")
+    print("2. Buscar película")
+    print("3. Eliminar película")
+    print("4. Actualizar disponibilidad")
+    print("5. Mostrar películas")
+    print("6. Salir")
+    print("=====================================")
+
+    def solicitar_opcion():
+        while true:
+            opcion_ped = input("Ingrese una opcion").strip()
+            if opcion_ped.isdigit():
+                opcion_ped = int(opcion_ped)
+                if 1 <= opcion <= 6:
+                    return opcion 
+            print("Opcion invalida! Vuelva a intentar")
+    
