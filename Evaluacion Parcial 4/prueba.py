@@ -48,6 +48,11 @@ def add_pelicula(list):
         else:
             print("Ingrese una duracion valida.")
             val_duracion = False
+
+        if Calificacion(cal):
+            val_calificacion = True
+        else:
+            val_calificacion = False
     except:
         print("Ingreso invalido no se agregara a la coleccion.")
 
@@ -72,6 +77,13 @@ def Duracion(duracion):
         return True
     else:
         return False
+    
+def Calificacion(cal):
+    if cal >= 1.0 and cal <= 10.0:
+        return True
+    else:
+        return False
+
 
 #=====================================================================================
 
