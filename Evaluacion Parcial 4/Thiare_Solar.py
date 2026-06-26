@@ -34,3 +34,32 @@ def validarCalificacion():
         return True
     return False
 
+def agregarPelicula():
+    titulo = input("Ingrese el titulo de la pelicula: ")
+
+    if not validarTitulo:
+        print("Error, el titulo no puede estar vacio. ")
+        return
+    
+    try:
+        duracion = int(input("Ingrese la duracion: "))
+        if not validarDuracion:
+            print("Error, la duracion debe ser un numero entero mayor que cero. ")
+            return
+        calificacion = float(input("Ingrese la calificación de (0.0 a 10.0): "))
+        if not validarCalificacion:
+            print("Error, la calificacion debe estar entre 0.0 y 10.0")
+            return
+    except ValueError:
+        print("Error, el tipo de dato ingresado es incorrecto")
+        return
+    
+    nuevaPelicula = {
+        "titulo": titulo,
+        "duracion": duracion,
+        "calificacion": calificacion,
+        "disponible": False 
+    }
+    listaPeliculas.append()
+    print("¡Pelicula '{titulo}' agregada con exito!")
+    
