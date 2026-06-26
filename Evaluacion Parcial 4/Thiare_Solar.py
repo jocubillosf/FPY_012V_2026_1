@@ -5,7 +5,7 @@ def mostrarMenu():
     print("1) Agregar pelicula")
     print("2) Buscar pelicula")
     print("3) Eliminar pelicula")
-    print("4) Eliminar pelicula")
+    print("4) actualizar pelicula")
     print("5) Mostrar peliculas")
     print("6) Salir")
 
@@ -40,7 +40,7 @@ def agregarPelicula(listaPeliculas):
     
     try:
         duracion = int(input("Ingrese la duracion: "))
-        if not validarDuracion:
+        if not validarDuracion(duracion):
             print("Error, la duracion debe ser un numero entero mayor que cero. ")
             return
         calificacion = float(input("Ingrese la calificación de (0.0 a 10.0): "))
@@ -58,7 +58,7 @@ def agregarPelicula(listaPeliculas):
         "disponible": False 
     }
     listaPeliculas.append(nuevaPelicula)
-    print("¡Pelicula '{titulo}' agregada con exito!")
+    print(f"¡Pelicula '{titulo}' agregada con exito!")
 
 def buscarPelicula(listaPeliculas, tituloBuscar):
     for i in range(len(listaPeliculas)):
@@ -71,10 +71,10 @@ def eliminarPelicula(listaPeliculas):
     posicion = buscarPelicula
 
     if posicion != -1:
-        listaPeliculas.pop
-        print("La pelicula '{tituloEliminar}' fue eliminada correctamente. ")
+        listaPeliculas.pop(posicion)
+        print(f"La pelicula '{tituloEliminar}' fue eliminada correctamente. ")
     else:
-        print("La pelicula '{tituloEliminar}' no se encuentra registrada. ")
+        print(f"La pelicula '{tituloEliminar}' no se encuentra registrada. ")
 
 def actualizarDisponibilidad(listaPeliculas):
     
@@ -122,8 +122,8 @@ def main():
             pos = buscarPelicula(coleccionPeliculas, titulo_b)
             if pos != -1:
                 peli = coleccionPeliculas[pos]
-                print("Película encontrada en la posición {pos}:")
-                print("Título: {peli['titulo']} | Duración: {peli['duracion']} min | Calificación: {peli['calificacion']}")
+                print(f"Película encontrada en la posición {pos}:")
+                print(f"Título: {peli['titulo']} | Duración: {peli['duracion']} min | Calificación: {peli['calificacion']}")
             else:
                 print("Película no encontrada.")
         elif opcion == 3:
