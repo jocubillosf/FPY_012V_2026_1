@@ -17,7 +17,7 @@ def esCalificacionValida(nota):
         return False
 
 def menu():
-    print("\n========== CINE ==========")
+    print("=========== CINE ===========")
     print("1.- Agregar película")
     print("2.- Buscar película")
     print("3.- Eliminar película")
@@ -104,7 +104,7 @@ def mostrar(lista):
 
     actualizar(lista)
 
-    print("\n===== PELÍCULAS =====")
+    print("====== PELÍCULAS ======")
 
     if len(lista) == 0:
         print("No existen películas.")
@@ -163,4 +163,5 @@ while ejecutar:
         print("Gracias por usar el sistema.")
         ejecutar = False
 
-#prueba github
+
+
