@@ -1,5 +1,5 @@
 
-def menuPrincipal():
+def mostrar_menu():
     print("========== MENÚ PRINCIPAL ==========")
     print("1. Agregar película")
     print("2. Buscar película")
@@ -16,5 +16,140 @@ def menuPrincipal():
                 opcion_ped = int(opcion_ped)
                 if 1 <= opcion <= 6:
                     return opcion 
-            print("Opcion invalida! Vuelva a intentar")
+                print("Opcion invalida! Vuelva a intentar")
+    
+    def validar_titulo(titulo):
+        return lean(titulo.strip()) > 0
+    
+    def validar_duracion(duracion_ped):
+        try:
+            duracion = int(duracion_ped)
+            return duracion 
+        except ValueError:
+            return false 
+        
+    def validar_calificacion(calificacion_ped):
+        try:
+            calificacion = float(calificacion_ped)
+            return 0.0 <= calificacion <= 10.0
+        except ValueError:
+            return false 
+    
+    def agregar_pelicula(lista_peliculas):
+        print("--- AGREGAR PELÍCULA ---")
+        titulo = input("Ingrese el título de la película: ")
+        duracion_ped = input("Ingrese la duración (en minutos): ")                   
+        calificacion_ped = input("Ingrese la calificación (0.0 - 10.0): ")
+
+    es_valido = True
+
+    if not validar_titulo(titulo):
+        print("Error: El título no puede estar vacío ni contener solo espacios en blanco.")
+        es_valido = False
+
+    if not validar_duracion(duracion_ped):
+        print("Error: La duración debe ser un número entero mayor que cero.")
+        es_valido = False
+
+    if not validar_calificacion(calificacion_ped):
+        print("Error: La calificación debe ser un número decimal entre 0.0 y 10.0 (incluidos).")
+        es_valido = False
+
+    if es_valido:
+        nueva_pelicula = {
+            "titulo": titulo.strip(),
+            "duracion": int(duracion_ped),
+            "calificacion": float(calificacion_ped),
+            "disponible": False
+        }
+        lista_peliculas.append(nueva_pelicula)
+        print(f"¡Película '{nueva_pelicula['titulo']}' registrada con éxito!")
+    else:
+        print("No se pudo registrar la película debido a los errores anteriores.")
+
+
+def buscar_pelicula(lista_peliculas, titulo_buscar):
+    for i in range(len(lista_peliculas)):
+        if lista_peliculas[i]["titulo"] == titulo_buscar:
+            return i
+    return -1
+
+
+def eliminar_pelicula(lista_peliculas):
+    print("\n--- ELIMINAR PELÍCULA ---")
+    titulo_eliminar = input("Ingrese el título de la película a eliminar: ").strip()
+    
+    posicion = buscar_pelicula(lista_peliculas, titulo_eliminar)
+    
+    if posicion != -1:
+        pelicula_eliminada = lista_peliculas.pop(posicion)
+        print(f"¡La película '{pelicula_eliminada['titulo']}' fue eliminada exitosamente!")
+    else:
+        print(f"La película '{titulo_eliminar}' no se encuentra registrada.")
+
+
+def actualizar_disponibilidad(lista_peliculas):
+    for pelicula in lista_peliculas:
+        if pelicula["calificacion"] >= 7.0:
+            pelicula["disponible"] = True
+        else:
+            pelicula["disponible"] = False
+
+
+def mostrar_peliculas(lista_peliculas):
+    print("\n=== LISTA DE PELICULAS ===")
+    
+    if not lista_peliculas:
+        print("No hay películas registradas en el sistema.")
+        return
+
+    actualizar_disponibilidad(lista_peliculas)
+    
+    for pelicula in lista_peliculas:
+        estado = "DISPONIBLE" if pelicula["disponible"] else "NO RECOMENDADA"
+        print(f"Título: {pelicula['titulo']}")
+        print(f"Duración: {pelicula['duracion']}")
+        print(f"Calificación: {pelicula['calificacion']}")
+        print(f"Estado: {estado}")
+        print("********************************************")
+
+
+coleccion_peliculas = []
+
+while True:
+    mostrar_menu()
+    opcion = solicitar_opcion()
+    
+    if opcion == 1:
+        agregar_pelicula(coleccion_peliculas)
+        
+    elif opcion == 2:
+        print("\n--- BUSCAR PELÍCULA ---")
+        titulo_busqueda = input("Ingrese el título exacto de la película a buscar: ").strip()
+        posicion = buscar_pelicula(coleccion_peliculas, titulo_busqueda)
+        
+        if posicion != -1:
+            pelicula = coleccion_peliculas[posicion]
+            estado = "DISPONIBLE" if pelicula["disponible"] else "NO RECOMENDADA"
+            print(f"\n[Película Encontrada en la posición {posicion}]")
+            print(f"Título: {pelicula['titulo']}")
+            print(f"Duración: {pelicula['duracion']} min")
+            print(f"Calificación: {pelicula['calificacion']}")
+            print(f"Estado actual: {estado}")
+        else:
+            print("Película no encontrada.")
+            
+    elif opcion == 3:
+        eliminar_pelicula(coleccion_peliculas)
+        
+    elif opcion == 4:
+        actualizar_disponibilidad(coleccion_peliculas)
+        print("\nDisponibilidad de todas las películas actualizada con éxito.")
+        
+    elif opcion == 5:
+        mostrar_peliculas(coleccion_peliculas)
+        
+    elif opcion == 6:
+        print("\nGracias por usar el sistema. Vuelva Pronto.")
+        break
     
