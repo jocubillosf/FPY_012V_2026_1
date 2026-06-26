@@ -99,6 +99,14 @@ def buscar_peli(list,name):
             return i
         else:
             return -1
+        
+def Actualizar_Estados(list):
+    for x in list:
+        if x["Calificacion"] >= 7.0:
+            x["Disponible"] = True
+        else:
+            x["Disponible"] = False
+    return
 
 
 
@@ -132,9 +140,9 @@ while op != 6:
             else:
                 print("La película",name,"no se encuentra registrada.")
         case 4:
-            print("Opcion",op)
+            Actualizar_Estados(coleccion_Peliculas)
         case 5:
-            print("Opcion",op)
+            Actualizar_Estados(coleccion_Peliculas)
         case 6:
             print("saliste")
         case _:
