@@ -143,7 +143,20 @@ while op != 6:
             Actualizar_Estados(coleccion_Peliculas)
         case 5:
             Actualizar_Estados(coleccion_Peliculas)
+            print("=== LISTA DE PELICULAS ===")
+            for peliculas in coleccion_Peliculas:
+                print(" ")
+                print("Titulo:",peliculas["Titulo"])
+                print("Duracion:",peliculas["Duracion"])
+                print("Calificacion:",peliculas["Calificacion"])
+                if peliculas["Disponible"]:
+                    print("Estado: Recomendada")
+                else:
+                    print("Estado:No Recomendada")
+                print("*************************************")
+
         case 6:
-            print("saliste")
+            print("Gracias por usar el sistema. Vuelva Pronto")
         case _:
             print("Opcion no es valida.")
+           
