@@ -1,4 +1,8 @@
 opcion = 0
+titulo = 0
+duracion = 0
+calificacion = 0
+
 
 def mostrarMenu():
     print("--MENÚ PRINCIPAL--")
@@ -15,3 +19,18 @@ def leerOpcion():
     except ValueError:
         return  print("Error debe ingresar una opción valida")
     
+def validarTitulo():
+    if titulo.strip() == " ":
+        return False
+    return True
+
+def validarDuracion():
+    if duracion > 0:
+        return True
+    return False
+
+def validarCalificacion():
+    if 0.0 <= calificacion <= 10.0:
+        return True
+    return False
+
