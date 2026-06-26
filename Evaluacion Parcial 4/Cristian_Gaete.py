@@ -23,9 +23,9 @@ def leer_opcion():
 # ====================================================
 
 def validar_titulo(titulo):
-    titulo_limpio = titulo.strip()
+    titulo_limpio = titulo.strip() # elimina espacios en los límites
     while "  " in titulo_limpio:
-        titulo = titulo_limpio.replace("  ", " ")
+        titulo = titulo_limpio.replace("  ", " ") # elimina espacios interiores
     if titulo_limpio == "":
         return False
     else:
@@ -37,8 +37,8 @@ def validar_duracion(duracion):
     else:
         return False
 
-def validar_clasificacion(clasificacion):
-    if clasificacion >= 0.0 and clasificacion <= 10.0:
+def validar_calificacion(calificacion):
+    if calificacion >= 0.0 and calificacion <= 10.0:
         return True
     else:
         return False
@@ -55,21 +55,21 @@ def agregar_pelicula(lista):
             print("Error de formato: La duración debe ser un número entero.")
     while True:
         try:
-            clasificacion = float(input("Ingrese la clasificación: "))
+            calificacion = float(input("Ingrese la calificacion: "))
             break
         except ValueError:
-            print("Error de formato: La clasificación debe ser un número.")
+            print("Error de formato: La calificacion debe ser un número.")
     if validar_titulo(titulo) == False:
         print("Error: Titulo no válido.")
     elif validar_duracion(duracion) == False:
         print("Error: Duración no válida.")
-    elif validar_clasificacion(clasificacion) == False:
-        print("Error: Clasificación no válida.")    
+    elif validar_calificacion(calificacion) == False:
+        print("Error: calificacion no válida.")    
     else:
         peliculas = {
             "titulo": titulo,
             "duracion": duracion,
-            "clasificacion": clasificacion,
+            "calificacion": calificacion,
             "disponible": True
         }
         lista.append(peliculas)
@@ -86,20 +86,20 @@ def buscar_pelicula(lista, titulo):
 # ====================================================
 
 def eliminar_pelicula(lista):
-    nombre_a_buscar = input("Ingrese el titulo de la película a eliminar: ")
-    posicion = buscar_pelicula(lista, nombre_a_buscar)
+    titulo_a_buscar = input("Ingrese el titulo de la película a eliminar: ")
+    posicion = buscar_pelicula(lista, titulo_a_buscar)
     
     if posicion != -1:
         lista.pop(posicion)
         print("Película eliminada.")
     else:
-        print(f"La película '{nombre_a_buscar}' no se encuentra registrada.")
+        print(f"La película '{titulo_a_buscar}' no se encuentra registrada.")
 
 # ====================================================
 
 def actualizar_disponibilidad(lista):
     for pelicula in lista:
-        if pelicula["clasificacion"] >= 7.0:
+        if pelicula["calificacion"] >= 7.0:
             pelicula["disponible"] = True
         else:
             pelicula["disponible"] = False
@@ -116,7 +116,7 @@ def mostrar_pelicula(lista):
             texto_estado = "NO RECOMENDADA"   
         print(f"titulo: {pelicula['titulo']}")
         print(f"duracion: {pelicula['duracion']}")
-        print(f"clasificacion: {pelicula['clasificacion']}")
+        print(f"calificacion: {pelicula['calificacion']}")
         print(f"disponible: {texto_estado}")
         print("********************************************")
 
@@ -135,7 +135,7 @@ while True:
         if posicion != -1:
             pelicula_encontrada = lista_peliculas[posicion]
             print(f"Película encontrada en la posición {posicion}:")
-            print(f"Titulo: {pelicula_encontrada['titulo']}, Duracion: {pelicula_encontrada['duracion']}, clasificacion: {pelicula_encontrada['clasificacion']}")
+            print(f"Titulo: {pelicula_encontrada['titulo']}, Duracion: {pelicula_encontrada['duracion']}, calificacion: {pelicula_encontrada['calificacion']}")
         else:
             print("Película no encontrado.")
             
