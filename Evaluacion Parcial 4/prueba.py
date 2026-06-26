@@ -124,7 +124,13 @@ while op != 6:
                 print("La película",name,"no se encuentra registrada.")
 
         case 3:
-            print("Opcion",op)
+            name = input("Ingrese el nombre de la pelicula que busca")
+            posicion = buscar_peli(coleccion_Peliculas,name)
+            if posicion >= 0:
+                coleccion_Peliculas.pop(posicion)
+                print("Pelicula eliminada.")
+            else:
+                print("La película",name,"no se encuentra registrada.")
         case 4:
             print("Opcion",op)
         case 5:
