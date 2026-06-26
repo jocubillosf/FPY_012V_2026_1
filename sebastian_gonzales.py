@@ -2,7 +2,7 @@
 
 listadepeliculas = []
 
-def mostrarMenu():
+def mostrar_menu():
     print("========== MENÚ PRINCIPAL ==========")
     print("1. Agregar película")
     print("2. Buscar película")
@@ -54,7 +54,7 @@ def agregar_pelicula(lista):
 
     duracion = input("Ingrese la duración de la pelicula (en minutos): ")
     if not validar_duracion(duracion):
-        print("la duración de la pelicula debe ser un número entero mayor que cero.")
+        print("la duración debe ser un número entero mayor que cero.")
         return
 
     calificacion = input("Ingrese la calificación de la pelicula (entre 0.0 - 10.0): ")
@@ -108,7 +108,7 @@ def mostrar_peliculas(lista):
         print("*" * 45)
 
 while True:
-    mostrarMenu()
+    mostrar_menu()
     opcion = leer_opcion()
 
     if opcion == 1:
