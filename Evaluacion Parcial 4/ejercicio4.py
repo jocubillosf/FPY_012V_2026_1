@@ -29,7 +29,7 @@ def validarCalificacion(calificacion):
 
 
 def mostrarMenu():
-    print("\n====== MENU ======")
+    print("====== MENU ======")
     print("1. Agregar película")
     print("2. Buscar película")
     print("3. Eliminar película")
