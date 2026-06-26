@@ -1,6 +1,6 @@
 
 def mostrar_menu():
-    print("========== MENÚ PRINCIPAL ==========")
+    print("\n========== MENÚ PRINCIPAL ==========")
     print("1. Agregar película")
     print("2. Buscar película")
     print("3. Eliminar película")
@@ -9,37 +9,42 @@ def mostrar_menu():
     print("6. Salir")
     print("=====================================")
 
-    def solicitar_opcion():
-        while true:
-            opcion_ped = input("Ingrese una opcion").strip()
-            if opcion_ped.isdigit():
-                opcion_ped = int(opcion_ped)
-                if 1 <= opcion <= 6:
-                    return opcion 
-                print("Opcion invalida! Vuelva a intentar")
-    
-    def validar_titulo(titulo):
-        return lean(titulo.strip()) > 0
-    
-    def validar_duracion(duracion_ped):
-        try:
-            duracion = int(duracion_ped)
-            return duracion 
-        except ValueError:
-            return false 
-        
-    def validar_calificacion(calificacion_ped):
-        try:
-            calificacion = float(calificacion_ped)
-            return 0.0 <= calificacion <= 10.0
-        except ValueError:
-            return false 
-    
-    def agregar_pelicula(lista_peliculas):
-        print("--- AGREGAR PELÍCULA ---")
-        titulo = input("Ingrese el título de la película: ")
-        duracion_ped = input("Ingrese la duración (en minutos): ")                   
-        calificacion_ped = input("Ingrese la calificación (0.0 - 10.0): ")
+
+def solicitar_opcion():
+    while True:
+        opcion_ped = input("Seleccione una opción (1-6): ").strip()
+        if opcion_ped.isdigit():
+            opcion = int(opcion_ped)
+            if 1 <= opcion <= 6:
+                return opcion
+        print("Error: Opción inválida. Intente nuevamente.")
+
+
+def validar_titulo(titulo):
+    return len(titulo.strip()) > 0
+
+
+def validar_duracion(duracion_ped):
+    try:
+        duracion = int(duracion_ped)
+        return duracion > 0
+    except ValueError:
+        return False
+
+
+def validar_calificacion(calificacion_ped):
+    try:
+        calificacion = float(calificacion_ped)
+        return 0.0 <= calificacion <= 10.0
+    except ValueError:
+        return False
+
+
+def agregar_pelicula(lista_peliculas):
+    print("\n--- AGREGAR PELÍCULA ---")
+    titulo = input("Ingrese el título de la película: ")
+    duracion_ped = input("Ingrese la duración (en minutos): ")
+    calificacion_ped = input("Ingrese la calificación (0.0 - 10.0): ")
 
     es_valido = True
 
@@ -152,4 +157,5 @@ while True:
     elif opcion == 6:
         print("\nGracias por usar el sistema. Vuelva Pronto.")
         break
+
     
