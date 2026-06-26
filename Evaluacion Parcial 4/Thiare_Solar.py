@@ -68,7 +68,7 @@ def buscarPelicula(listaPeliculas, tituloBuscar):
 
 def eliminarPelicula(listaPeliculas):
     tituloEliminar = input("Ingrese el titulo de la pelicula a eliminar: ")
-    posicion = buscarPelicula
+    posicion = buscarPelicula(listaPeliculas, tituloEliminar)
 
     if posicion != -1:
         listaPeliculas.pop(posicion)
