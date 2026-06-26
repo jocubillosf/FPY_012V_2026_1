@@ -42,6 +42,12 @@ def add_pelicula(list):
                 print("El nombre no puede ser solo espacios")
             else:
                 print("El nombre no puede estar vacio")
+
+        if Duracion(dur):
+            val_duracion = True
+        else:
+            print("Ingrese una duracion valida.")
+            val_duracion = False
     except:
         print("Ingreso invalido no se agregara a la coleccion.")
 
@@ -57,6 +63,12 @@ def Solo_espacios(name):
         if x != " ":
             cont_letras=+1
     if cont_letras != 0:
+        return True
+    else:
+        return False
+
+def Duracion(duracion):
+    if duracion > 0:
         return True
     else:
         return False
