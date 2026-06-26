@@ -21,7 +21,20 @@ def tomar_opcion(op):
     except:
         print("opcion no valida.")
 
+def add_pelicula(list):
+    pelicula = {"Titulo":"","Duracion":0,"Calificacion":0.0,"Disponible":None}
+    name = ""
+    dur = 0
+    cal = 0.0
 
+    try:
+        name = input("Ingrese el nombre de la pelicula:")
+        dur = int(input("Ingrese la duracion de la pelicula:"))
+        cal = float(input("Ingresa la calificacion de la pelicula:"))
+
+        if
+    except:
+        print("Ingreso invalido no se agregara a la coleccion.")
 
 #=====================================================================================
 
@@ -33,7 +46,7 @@ while op != 6:
     match op:
 
         case 1:
-            print("Opcion",op)
+            add_pelicula(coleccion_Peliculas)
         case 2:
             print("Opcion",op)
         case 3:
