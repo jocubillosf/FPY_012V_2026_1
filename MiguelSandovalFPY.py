@@ -1,0 +1,8 @@
+print("========== MENÚ PRINCIPAL ==========")
+print("1. Agregar película")
+print("2. Buscar película")
+print("3. Eliminar película")
+print("4. Actualizar disponibilidad")
+print("5. Mostrar películas")
+print("6. Salir")
+print("=====================================")
