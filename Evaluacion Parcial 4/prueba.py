@@ -26,15 +26,40 @@ def add_pelicula(list):
     name = ""
     dur = 0
     cal = 0.0
+    val_titulo = None
+    val_duracion = None
+    val_calificacion = None
 
     try:
         name = input("Ingrese el nombre de la pelicula:")
         dur = int(input("Ingrese la duracion de la pelicula:"))
         cal = float(input("Ingresa la calificacion de la pelicula:"))
 
-        if
+        if Titulo_vacio(name) and Solo_espacios(name):
+            val_titulo = True
+        else:
+            if Titulo_vacio(name):
+                print("El nombre no puede ser solo espacios")
+            else:
+                print("El nombre no puede estar vacio")
     except:
         print("Ingreso invalido no se agregara a la coleccion.")
+
+def Titulo_vacio(name):
+    if name != "":
+        return True
+    else:
+        return False
+    
+def Solo_espacios(name):
+    cont_letras = 0
+    for x in name:
+        if x != " ":
+            cont_letras=+1
+    if cont_letras != 0:
+        return True
+    else:
+        return False
 
 #=====================================================================================
 
