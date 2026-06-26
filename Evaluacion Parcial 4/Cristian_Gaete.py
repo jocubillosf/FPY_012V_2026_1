@@ -6,7 +6,7 @@ def mostrar_menu():
     print("2. Buscar película")
     print("3. Eliminar película")
     print("4. Actualizar disponibilidad")
-    print("5. Mostrar película")
+    print("5. Mostrar películas")
     print("6. Salir")
     print("=====================================")
 
@@ -70,7 +70,7 @@ def agregar_pelicula(lista):
             "titulo": titulo,
             "duracion": duracion,
             "clasificacion": clasificacion,
-            "Disponible": True
+            "disponible": True
         }
         lista.append(peliculas)
         print("Pelicula registrada correctamente.")
@@ -110,14 +110,14 @@ def mostrar_pelicula(lista):
     actualizar_disponibilidad(lista)
     print("=== LISTA DE PELICULAS ===")
     for pelicula in lista:
-        if pelicula["aprobado"] == True:
+        if pelicula["disponible"] == True:
             texto_estado = "DISPONIBLE"
         else:
             texto_estado = "NO RECOMENDADA"   
-        print(f"Nombre: {pelicula['titulo']}")
-        print(f"Edad: {pelicula['duracion']}")
-        print(f"Nota: {pelicula['clasificacion']}")
-        print(f"Estado: {texto_estado}")
+        print(f"titulo: {pelicula['titulo']}")
+        print(f"duracion: {pelicula['duracion']}")
+        print(f"clasificacion: {pelicula['clasificacion']}")
+        print(f"disponible: {texto_estado}")
         print("********************************************")
 
 # ====================================================
@@ -135,7 +135,7 @@ while True:
         if posicion != -1:
             pelicula_encontrada = lista_peliculas[posicion]
             print(f"Película encontrada en la posición {posicion}:")
-            print(f"Titulo: {pelicula_encontrada['titulo']}, Duracion: {pelicula_encontrada['edad']}, Nota: {pelicula_encontrada['nota']}")
+            print(f"Titulo: {pelicula_encontrada['titulo']}, Duracion: {pelicula_encontrada['duracion']}, clasificacion: {pelicula_encontrada['clasificacion']}")
         else:
             print("Película no encontrado.")
             
